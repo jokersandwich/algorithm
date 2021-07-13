@@ -11,11 +11,11 @@ public class LinkedQueue<Item> implements Iterable<Item> {
         private Node next;
     }
 
-    public LinkedQueue() {
-        first = null;
-        last = null;
-        n = 0;
-    }
+    // public LinkedQueue() {
+    //     first = null;
+    //     last = null;
+    //     n = 0;
+    // }
 
     public boolean isEmpty() {
         return first == null;
@@ -25,10 +25,9 @@ public class LinkedQueue<Item> implements Iterable<Item> {
         return n;
     }
 
-    public Item peek() {
-        if (isEmpty()) throw new NoSuchElementException('queue underflow');
-        return first.item;
-    }
+    // public Item peek() {
+    //     return first.item;
+    // }
 
     public void enqueue(Item item) {
         Node oldlast = last;
@@ -41,19 +40,17 @@ public class LinkedQueue<Item> implements Iterable<Item> {
     }
 
     public Item dequeue() {
-        if (isEmpty()) throw new NoSuchElementException('queue underflow');
-        Item item = first.item;
         first = first.next;
         n--;
         if (isEmpty()) last = null;
         return item;
     }
 
-    public String toString() {
-        StringBuilder s = new StringBuilder();
-        for (Item item: this) s.append(item + ' ');
-        return s.toString();
-    }
+    // public String toString() {
+    //     StringBuilder s = new StringBuilder();
+    //     for (Item item: this) s.append(item + ' ');
+    //     return s.toString();
+    // }
 
     // public Iterator<Item> iterator() {
     //     return new LinkedIterator();

@@ -34,17 +34,15 @@ public class LinkedStack<Item> implements Iterable<Item> {
     }
 
     public Item pop() {
-        if (isEmpty()) throw new NoSuchElementException('stack underflow');
         Item item = first.item;
         first = first.next;
         n--;
         return item;
     }
 
-    public Item peek() {
-        if (isEmpty()) throw new NoSuchElementException('stack underflow');
-        return first.item;
-    }
+    // public Item peek() {
+    //     return first.item;
+    // }
 
     // public String toString() {
     //     StringBuilder s = new StringBuilder();

@@ -10,10 +10,10 @@ public class LinkedBag<Item> implements Iterable<Item> {
         private Node next;
     }
 
-    public LinkedBag() {
-        first = null;
-        n = 0;
-    }
+    // public LinkedBag() {
+    //     first = null;
+    //     n = 0;
+    // }
 
     public boolean isEmpty() {
         return first == null;
