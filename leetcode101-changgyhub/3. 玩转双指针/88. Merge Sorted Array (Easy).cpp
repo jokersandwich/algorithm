@@ -11,7 +11,7 @@ void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
 
 // c++版本更好，因为如果n先复制完，剩下几个m是排好序的，不需要再遍历
 // javascript版本无论如何都会遍历完，可能会浪费一些操作（原地复制）
-// 不过javascript版本更简单，更容易理解？
+// javascript版本比较更简单，容易理解
 
 // javascript
 /**
