@@ -14,5 +14,4 @@ ListNode *detectCycle(ListNode *head) {
     return fast;
 }
 
-// 没太懂
-// 我选择hashtable
+// 也可以用hashtable

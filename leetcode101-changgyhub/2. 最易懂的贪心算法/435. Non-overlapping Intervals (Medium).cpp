@@ -16,5 +16,3 @@ int eraseOverlapIntervals(vector<vector<int>>& intervals) {
     }
     return removed;
 }
-
-// 没太懂

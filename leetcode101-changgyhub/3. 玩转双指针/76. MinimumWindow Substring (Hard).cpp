@@ -27,4 +27,3 @@ string minWindow(string S, string T) {
     return min_size > S.size() ? "" : S.substr(min_1, min_size);
 }
 
-// 没太懂
