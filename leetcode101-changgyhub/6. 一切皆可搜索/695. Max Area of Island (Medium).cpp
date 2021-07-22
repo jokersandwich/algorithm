@@ -74,3 +74,33 @@ int dfs(vector<vector<int>>& grid, int r, int c) {
     grid[r][c] = 0;
     return 1 + dfs(grid, r + 1, c) + dfs(grid, r - 1, c) + dfs(grid, r, c + 1) + dfs(grid, r, c - 1);
 }
+
+// 为了确保每个土地访问不超过一次，每次经过一块土地时，将这块土地的值置为0。
+
+/**
+ * @param {number[][]} grid
+ * @return {number}
+ */
+var maxAreaOfIsland = function(grid) {
+    if (grid.length === 0 || grid[0].length === 0) {
+        return 0;
+    }
+    let maxArea = 0;
+    for (let i = 0; i < grid.length; i++) {
+        for (let j = 0; j < grid[i].length; j++) {
+            maxArea = Math.max(maxArea, dfs(grid, i, j));
+        }
+    }
+    return maxArea
+};
+
+function dfs(grid, r, c) {
+    if (r < 0 || r >= grid.length ||
+        c < 0 || c >= grid[r].length || 
+        grid[r][c] == 0) {
+            return 0;
+        }
+    grid[r][c] = 0;
+    return 1 + dfs(grid, r + 1, c) + dfs(grid, r - 1, c) +
+               dfs(grid, r, c + 1) + dfs(grid, r, c - 1);
+}
