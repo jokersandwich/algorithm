@@ -29,3 +29,5 @@ ListNode* reverseList(ListNode* head) {
     }
     return prev;
 }
+
+// 如果空间复杂度不要求O(1)，则反转整个链表，然后和原链表对比即可。
